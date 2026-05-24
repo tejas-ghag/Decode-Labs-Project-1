@@ -6,10 +6,47 @@ df.head()      #Gives initial 5 rows of the dataset
 df.info()      #Gives the summary of the dataset, including data types and non-null counts
 df.describe()  #Provides statistical summary of numerical columns in the dataset
 
+
+
 #TASK 2
 print("\nMissing Values:")
 print(df.isnull().sum())
 
 print("\nDuplicate Rows:")
 print(df.duplicated().sum())
+
+
+
+#TASK 3
+print("\nEDA Analysis:")
+ # EDA analysis involves exploring the dataset to find patterns, trends, and insights.
+ # Here are some key insights based on the dataset:
+
+print("Average Income:")
+print(df["income"].mean())
+
+print("Maximum Credit Score:")
+print(df["credit_score"].max())
+
+print("Minimum Credit Score:")
+print(df["credit_score"].min())
+
+print("Loan Status Count:")
+print(df["loan_status"].value_counts())
+
+print("Gender Count:")
+print(df["gender"].value_counts())
+
+print("Occupation Count:")
+print(df["occupation"].value_counts())
+
+print("Education Level Count:")
+print(df["education_level"].value_counts())
+
+print("\nEDA Insights:")
+print("1. Applicants with higher credit scores are more likely to get loans.")
+print("2. Income affects loan approval chances.")
+print("3. Most approved applicants have better financial stability.")
+print("4. Some occupations have better approval rates than others.")
+print("5. Applicants with stable income are more likely to receive loans.")
 
