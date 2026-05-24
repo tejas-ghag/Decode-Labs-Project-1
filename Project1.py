@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 #TASK 1 
 df = pd.read_csv('loan.csv')
@@ -50,3 +52,25 @@ print("3. Most approved applicants have better financial stability.")
 print("4. Some occupations have better approval rates than others.")
 print("5. Applicants with stable income are more likely to receive loans.")
 
+
+
+#TASK 4
+# Loan Status Distribution
+sns.countplot(x="loan_status", data=df)
+plt.title("Loan Status Distribution")
+plt.show()
+
+# Income Distribution
+sns.histplot(df["income"], bins=10)
+plt.title("Income Distribution")
+plt.show()
+
+# Credit Score vs Loan Status
+sns.boxplot(x="loan_status", y="credit_score", data=df)
+plt.title("Credit Score vs Loan Status")
+plt.show()
+
+# Correlation Heatmap
+sns.heatmap(df.corr(numeric_only=True), annot=True)
+plt.title("Correlation Heatmap")
+plt.show()
