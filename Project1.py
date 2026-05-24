@@ -74,3 +74,21 @@ plt.show()
 sns.heatmap(df.corr(numeric_only=True), annot=True)
 plt.title("Correlation Heatmap")
 plt.show()
+
+
+
+#TASK 5
+print("\nFinal Project Insights:")  
+'''Summarizing the key insights from the project and my understanding of the dataset 
+and its implications for loan approval processes.'''
+
+print("• Higher credit scores improve loan approval chances.")
+print("• Income plays an important role in loan approval.")
+print("• Financial stability increases the probability of approval.")
+print("• Applicants with stable occupations are approved more often.")
+print("• Data visualization helps understand applicant trends.")
+print("• Loan approval depends on multiple financial factors.")
+print("• The dataset can help banks analyze applicant profiles.")
+print("• This project demonstrates basic data science workflow.")
+print("• Exploratory Data Analysis helps identify useful business insights.")
+print("• The project can be extended using machine learning models in future.")
